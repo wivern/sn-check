@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import web, pymssql, serial
 
 # db = web.database(dbn='mssql', host='sql-srv.pentar.ru', db='products', user='WebUser', pw='WebUser')
