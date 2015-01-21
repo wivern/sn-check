@@ -1,0 +1,25 @@
+$def with (items, serial)
+<h2>$serial</h2>
+$if len(items) == 0:
+	<div class="alert">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<strong>Предупреждение!</strong> Серийный номер $serial не зарегистрирован.
+	</div>
+<table class="table table-stripped">
+ <thead>
+	<tr>
+		<th>#</th>
+		<th>Код товара</th>
+		<th>Наименование</th>
+	</tr>
+  </thead>
+  <tbody>
+$for sn in items:
+	<tr>
+		<td>$loop.index</td>
+		<td><a href="http://www.zooma.ru/cat/photo/$sn.code/">$sn.code</a></td>
+		<td>$sn.name</td>
+	</tr>
+</tbody>
+</table>
+<a href="/">&laquo; Новый поиск</a>
